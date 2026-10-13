@@ -1,0 +1,15 @@
+
+# Raw datasets and downloaded archives
+data/raw/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and local environment settings
+.env
+
+# Verbose local terminal output
+schema_comparison_report.txt
