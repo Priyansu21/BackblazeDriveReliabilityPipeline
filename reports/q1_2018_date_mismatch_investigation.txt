@@ -1,0 +1,203 @@
+Q1 2018 DATE MISMATCH INVESTIGATION
+========================================
+Daily files discovered: 90
+Total rows with date/filename mismatch: 100,253
+Files with at least one mismatch: 1
+Files with processing errors: 0
+
+MOST COMMON FILENAME DATE -> ROW DATE PAIRS
+----------------------------------------
+2018-02-25 -> 2/25/18: 100,253 rows
+
+FILES WITH THE MOST MISMATCHES
+----------------------------------------
+2018-02-25: 100,253 rows
+
+FIRST 30 MISMATCH EXAMPLES
+----------------------------------------
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z305B2QN
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAHG1S4H
+  Failure: 0
+  Model: HGST HMS5C4040ALE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA16NQJR
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA18CEBT
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA18CEBS
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z305DEMG
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA130TTW
+  Failure: 0
+  Model: ST8000DM002
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA18CEBF
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL2331LAG9TEEJ
+  Failure: 0
+  Model: HGST HMS5C4040ALE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL2331LAH3WYAJ
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z3023VGH
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAHG53YH
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z305DEMX
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL2331LAHDUVVJ
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA10JDYK
+  Failure: 0
+  Model: ST8000DM002
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAGSPEUH
+  Failure: 0
+  Model: HGST HMS5C4040ALE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAHD1HTH
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z4D05G2K
+  Failure: 0
+  Model: ST6000DX000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z306WYZZ
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: S300ZP5B
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z4D062ZT
+  Failure: 0
+  Model: ST6000DX000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAHD0PDH
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA181A91
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL1331LAHD00PH
+  Failure: 0
+  Model: HGST HMS5C4040BLE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: Z304XHJW
+  Failure: 0
+  Model: ST4000DM000
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: PL2331LAGPS2TJ
+  Failure: 0
+  Model: HGST HMS5C4040ALE640
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA13YGBE
+  Failure: 0
+  Model: ST8000DM002
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA18CEB3
+  Failure: 0
+  Model: ST8000NM0055
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA13YGBG
+  Failure: 0
+  Model: ST8000DM002
+File: 2018-02-25.csv
+  Filename date: 2018-02-25
+  Row date: 2/25/18
+  Serial number: ZA13YGBX
+  Failure: 0
+  Model: ST8000DM002
+
+INTERPRETATION
+----------------------------------------
+This report identifies mismatches; it does not determine their cause.
+Inspect the date pairs and affected files before deciding whether
+the records should be accepted, quarantined, or handled differently.

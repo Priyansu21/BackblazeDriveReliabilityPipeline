@@ -1,0 +1,48 @@
+Q1 2018 DATA QUALITY PROFILE
+======================================
+Archive: data_Q1_2018.zip
+Daily CSV files discovered: 90
+Files processed successfully: 90
+Files with errors: 0
+Total observations processed: 8,949,492
+
+KEY QUALITY CHECKS
+--------------------------------------
+Duplicate (date, serial_number) keys: 0
+Rows with missing date: 0
+Rows with missing serial_number: 0
+Rows whose date differs from filename: 100,253
+
+PROFILE METRICS
+--------------------------------------
+Distinct nonblank serial numbers: 105,004
+Distinct nonblank models: 53
+Failure values: {'0': 8949159, '1': 333}
+Rows with failure=1: 333
+
+DAILY OBSERVATION COUNTS
+--------------------------------------
+First daily file: 2018-01-01 — 94,186
+Last daily file: 2018-03-31 — 100,110
+Minimum daily count: 94,186
+Maximum daily count: 100,618
+
+TOP 10 MODELS BY OBSERVATION COUNT
+--------------------------------------
+ST4000DM000: 2,822,282
+HGST HMS5C4040BLE640: 1,363,173
+ST12000NM0007: 1,296,465
+ST8000NM0055: 1,293,557
+ST8000DM002: 888,774
+HGST HMS5C4040ALE640: 505,045
+ST6000DX000: 169,017
+Hitachi HDS5C4040ALE630: 115,984
+ST10000NM0086: 109,738
+HGST HUH728080ALE600: 94,024
+
+INTERPRETATION
+--------------------------------------
+Failure=1 counts are observations marked as failures, not a failure rate.
+Model counts are observations, not distinct drives per model.
+Duplicate-key checks are within each daily file; a drive appearing
+on different dates is expected.

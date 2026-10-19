@@ -1,0 +1,15 @@
+Q1 2018 DAILY HEADER CONSISTENCY REPORT
+==========================================
+Archive: data_Q1_2018.zip
+Daily CSV files discovered: 90
+Reference header: 2018-01-01.csv
+Reference column count: 105
+
+RESULTS
+------------------------------------------
+Files with matching ordered headers: 90
+Files with different headers: 0
+Files whose headers could not be read: 0
+
+OVERALL RESULT: PASS
+All daily CSV files have the same ordered header.

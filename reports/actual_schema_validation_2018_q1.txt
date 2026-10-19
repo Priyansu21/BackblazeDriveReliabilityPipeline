@@ -1,0 +1,21 @@
+BACKBLAZE ACTUAL SCHEMA VALIDATION
+========================================
+Archive: data_Q1_2018.zip
+Sample CSV inside archive: 2018-01-01.csv
+Daily CSV files in archive: 90
+
+Q1 2016 baseline columns: 95
+Actual Q1 2018 sample columns: 105
+Documented Q1 2018 columns: 105
+
+ACTUAL Q1 2018 VS Q1 2016
+Added: 10
+Removed: 0
+Added columns: ['smart_177_normalized', 'smart_177_raw', 'smart_179_normalized', 'smart_179_raw', 'smart_181_normalized', 'smart_181_raw', 'smart_182_normalized', 'smart_182_raw', 'smart_235_normalized', 'smart_235_raw']
+Removed columns: []
+
+ACTUAL Q1 2018 VS DOCUMENTED Q1 2018
+Actual-only columns: []
+Documented-only columns: []
+Exact ordered match: True
+Same columns, possibly different order: True

@@ -1,0 +1,14 @@
+Q1 2018 DATE FORMAT VALIDATION
+======================================
+Daily files inspected: 90
+Total rows inspected: 8,949,492
+Rows with unparseable or blank dates: 0
+Parsed dates differing from filename date: 0
+
+DATE FORMAT / VALUE FREQUENCIES
+--------------------------------------
+M/D/YY: 100,253 rows
+YYYY-MM-DD: 8,849,239 rows
+
+OVERALL RESULT: PASS
+All row dates parse and match their filename dates.
