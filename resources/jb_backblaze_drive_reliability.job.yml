@@ -1,0 +1,91 @@
+resources:
+  jobs:
+    jb_backblaze_drive_reliability:
+      name: jb_backblaze_drive_reliability
+      description: >
+        End-to-end Backblaze drive reliability pipeline.
+        Loads Q1 2016 and Q1 2018 source observations,
+        builds unified Bronze data, processes Curated/Silver
+        records with quarantine handling, and publishes
+        Gold analytical views.
+      max_concurrent_runs: 1
+      queue:
+        enabled: true
+      tasks:
+        - task_key: bronze_2016
+          notebook_task:
+            notebook_path: ../notebooks/bronze/nb_func_drive_observations_2016_q1.ipynb
+            source: WORKSPACE
+          max_retries: 1
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+
+        - task_key: bronze_2018
+          notebook_task:
+            notebook_path: ../notebooks/bronze/nb_func_drive_observations_2018_q1.ipynb
+            source: WORKSPACE
+          max_retries: 1
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+
+        - task_key: bronze_unified
+          depends_on:
+            - task_key: bronze_2016
+            - task_key: bronze_2018
+          notebook_task:
+            notebook_path: ../notebooks/bronze/nb_func_drive_observations_unified.ipynb
+            source: WORKSPACE
+          max_retries: 1
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+
+        - task_key: silver_daily_stats_ddl
+          depends_on:
+            - task_key: bronze_unified
+          notebook_task:
+            notebook_path: ../notebooks/silver/ddl/nb_drive_daily_stats_ddl.ipynb
+            source: WORKSPACE
+
+        - task_key: silver_quarantine_ddl
+          depends_on:
+            - task_key: bronze_unified
+          notebook_task:
+            notebook_path: ../notebooks/silver/ddl/nb_drive_stats_quarantine_ddl.ipynb
+            source: WORKSPACE
+
+        - task_key: silver_daily_stats_etl
+          depends_on:
+            - task_key: silver_daily_stats_ddl
+            - task_key: silver_quarantine_ddl
+          notebook_task:
+            notebook_path: ../notebooks/silver/etl/nb_func_drive_daily_stats.ipynb
+            source: WORKSPACE
+          max_retries: 1
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+
+        - task_key: gold_failure_trend
+          depends_on:
+            - task_key: silver_daily_stats_etl
+          notebook_task:
+            notebook_path: ../notebooks/gold/nb_drive_failure_trend_vw.ipynb
+            source: WORKSPACE
+
+        - task_key: gold_model_reliability
+          depends_on:
+            - task_key: silver_daily_stats_etl
+          notebook_task:
+            notebook_path: ../notebooks/gold/nb_drive_model_reliability_vw.ipynb
+            source: WORKSPACE
+
+        - task_key: gold_capacity_distribution
+          depends_on:
+            - task_key: silver_daily_stats_etl
+          notebook_task:
+            notebook_path: ../notebooks/gold/nb_drive_capacity_distribution_vw.ipynb
+            source: WORKSPACE
+
+      tags:
+        environment: dev
+        layer: bronze-silver-gold
+        project: backblaze-drive-reliability

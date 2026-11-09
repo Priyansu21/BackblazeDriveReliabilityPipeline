@@ -1,0 +1,10 @@
+
+bundle:
+  name: backblaze-drive-reliability-pipeline
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    default: true
