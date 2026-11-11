@@ -13,3 +13,9 @@ venv/
 
 # Verbose local terminal output
 schema_comparison_report.txt
+
+# Airflow local configuration and secrets
+airflow/.env
+airflow/logs/
+
+airflow/config/airflow.cfg
